@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tic-Tac-Toe Game</h1>
+    <div class="gamecontainer">
+        <div class="container">
+            <div class="line"></div>
+            <div class="box b-t b-l"></div>
+            <div class="box b-t"></div>
+            <div class="box b-t b-r"></div>
+            <div class="box b-l"></div>
+            <div class="box"></div>
+            <div class="box b-r"></div>
+            <div class="box b-l b-b"></div>
+            <div class="box b-b"></div>
+            <div class="box b-b b-r"></div>
+        </div>
+        <div class="infocontainer">
+            <div class="info">
+                <div class="turn" id="turn">X-player turn</div>
+            </div>
+            <div>
+                <img src="excited.gif" style="width: 100px;" class="ofView" id="img">
+            </div>
+            <button id="reset">Restart</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

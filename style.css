@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    background-color: cadetblue;
+}
+
+h1 {
+    text-align: center;
+    color: wheat;
+    background-color: darkslateblue;
+    padding: 10px;
+}
+
+.container {
+    margin: auto;
+    margin-top: 20px;
+    padding: 5px 0;
+    background-color: black;
+    width: 330px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-radius: 5px;
+}
+
+.box {
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+    margin: 1.5px 0;
+    cursor: pointer;
+    color: aliceblue;
+    font-size: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box:hover {
+    background-color: rgb(48, 42, 50);
+}
+
+.box:active {
+    transform: scale(0.9);
+}
+
+.infocontainer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.info {
+    padding: 5px;
+}
+
+.info .turn {
+    padding: 10px;
+    font-size: 24px;
+}
+
+#reset {
+    color: aliceblue;
+    background-color: darkblue;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#reset:active {
+    transform: scale(0.9);
+}
+
+.ofView {
+    display: none;
+}
+
+.onView {
+    width: 100px;
+}
+
+#reset {
+    margin: 10px;
+}
+
+.b-t {
+    border-top: 0;
+}
+
+.b-r {
+    border-right: 0;
+}
+
+.b-l {
+    border-left: 0;
+}
+
+.b-b {
+    border-bottom: 0;
+}
+
+.line_view {
+    position: absolute;
+    width: 300px;
+    height: 3px;
+    background-color: #21908f;
+}
+
+@media screen and (max-width: 400px){
+    .container {
+        width: 50%;
+        height: 50%;
+    }
+
+    .box {
+        width: 25%;
+        height: 3.5rem;
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .line {
+        display: none;
+    }
+}
