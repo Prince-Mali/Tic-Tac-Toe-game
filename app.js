@@ -21,6 +21,7 @@ function boxpress() {
         changeTurn();
         player.innerText = `${turn}-player turn`;
         checkWin();
+        gameOver();
     }
 };
 
@@ -51,20 +52,28 @@ const checkWin = () => {
             music.play();
             document.getElementById("img").classList.replace("ofView","onView");
             document.querySelector(".line").classList.add("line_view");
+            document.querySelector(".line").classList.remove("view");
             document.querySelector(".line").style.transform = `translate(${element[3]}px, ${element[4]}px) rotate(${element[5]}deg)`;
         }
     });
 };
+
+const gameOver = () => {
+    if((boxes[0].innerText == "X" || boxes[0].innerText == "O") && (boxes[1].innerText == "X" || boxes[1].innerText == "O") && (boxes[2].innerText == "X" || boxes[2].innerText == "O") && (boxes[3].innerText == "X" || boxes[3].innerText == "O") && (boxes[4].innerText == "X" || boxes[4].innerText == "O") && (boxes[5].innerText == "X" || boxes[5].innerText == "O") && (boxes[6].innerText == "X" || boxes[6].innerText == "O") && (boxes[7].innerText == "X" || boxes[7].innerText == "O") && (boxes[8].innerText == "X" || boxes[8].innerText == "O")) {
+        player.innerText = "Game Over!!!";
+        game_over_music.play();
+    }
+}
 
 resetbtn.addEventListener("click",() => {
     gameover = false;
     turn = "X";
     player.innerText = `X-player turn`;
     document.getElementById("img").classList.add("ofView");
+    document.querySelector(".line").classList.add("view");
     music.pause();
     for(box of boxes){
         box.innerText = "";
     }
     document.querySelector(".line").classList.remove("line_view");
 })
-
